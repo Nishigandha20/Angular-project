@@ -1,0 +1,18 @@
+form{
+    margin-top: 10%;
+    width: 50%;
+}
+
+img{
+    border-radius: 30px;
+    height: 500px;
+    width: 100%;
+    padding: 10px 20px;
+    object-fit: cover;
+}
+
+@media screen and (max-width:600px) {
+    form{
+        width: 100%;
+    }
+}
