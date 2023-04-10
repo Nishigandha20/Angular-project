@@ -1,7 +1,21 @@
+.container{
+    margin-top: 15px;
+}
+
 form{
     margin-top: 10%;
     width: 50%;
 }
+
+input, textarea{
+    margin: 7px 0px;
+}
+
+button:hover{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
 
 img{
     border-radius: 30px;
@@ -9,6 +23,11 @@ img{
     width: 100%;
     padding: 10px 20px;
     object-fit: cover;
+}
+
+div a.btn{
+    position: sticky;
+    top: 0px;
 }
 
 @media screen and (max-width:600px) {

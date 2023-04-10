@@ -7,3 +7,12 @@
     color: var(--primary-color);
     text-decoration: underline;
 }
+
+.navbar-brand{
+    font-weight: bold;
+}
+
+.navbar-brand:hover{
+    font-weight: bold;
+    color: var(--primary-color);
+}

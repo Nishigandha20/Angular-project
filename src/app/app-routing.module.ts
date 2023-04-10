@@ -1,3 +1,4 @@
+import { SuccesspageComponent } from './pages/successpage/successpage.component';
 import { MenupageComponent } from './pages/menupage/menupage.component';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -12,6 +13,8 @@ const routes: Routes = [
   {path:'menu/:id',component:MenupageComponent},
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
+  {path:'successpage',component:SuccesspageComponent},
+
 ];
 
 @NgModule({
