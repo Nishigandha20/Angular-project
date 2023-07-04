@@ -3,8 +3,6 @@ import { Component, HostListener } from '@angular/core';
 //import readXlsxFile from 'read-excel-file';
 import { OrderDetailsService } from 'src/app/services/order-details.service';
 
-
-
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -14,7 +12,6 @@ import { OrderDetailsService } from 'src/app/services/order-details.service';
 export class MenuComponent {
   constructor() {}
   foodData: any = [];
-
   convertedJson!:string;
   onFileChange(event: any) {
     console.log(event.target.files);
@@ -30,19 +27,23 @@ export class MenuComponent {
         console.log(data);
         this.convertedJson = JSON.stringify(data, undefined,4)
       });
-
       console.log(workbook);
     };
   }
 }
 */
-
 export class MenuComponent {
-  constructor(private service:OrderDetailsService){  }
-  foodData:any;
+  constructor(private _services: OrderDetailsService) {}
+  foodMenuDisplay: any = [];
+  p:any;
 
-  ngOnInit():void{
-    this.foodData = this.service.foodDetails;
+
+  ngOnInit(): void {
+    this._services.foodMenu().subscribe((data: any) => {
+      this.foodMenuDisplay = data;
+    });
+    
 
   }
+  
 }

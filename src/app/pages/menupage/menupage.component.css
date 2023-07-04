@@ -7,28 +7,59 @@ form{
     width: 50%;
 }
 
+
 input, textarea{
     margin: 7px 0px;
 }
 
+button{
+    background-color: rgb(25, 26, 25);
+    width: 130px;
+    color: white;
+    font-size: 15px;    
+    padding: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    cursor: pointer;
+}
+
 button:hover{
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: rgb(176, 221, 176);
+    color: black;
+    font-size: 15px;    
+    font-weight: bold;
+    width: 130px;
+    cursor: pointer;
+}
+
+[disabled]{
+    background-color: rgb(180, 174, 174);
+    color: rgb(26, 26, 26);
+    border: none;
+    font-weight: bold;
 }
 
 
+
 img{
-    border-radius: 30px;
+    border-radius: 40px;
     height: 500px;
     width: 100%;
     padding: 10px 20px;
     object-fit: cover;
 }
 
+
+
 div a.btn{
     position: sticky;
     top: 0px;
 }
+
+
 
 @media screen and (max-width:600px) {
     form{

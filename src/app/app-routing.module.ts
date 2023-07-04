@@ -6,6 +6,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MenuComponent } from './pages/menu/menu.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {path:'', component:HomeComponent},
@@ -14,7 +15,7 @@ const routes: Routes = [
   {path:'about',component:AboutComponent},
   {path:'contact',component:ContactComponent},
   {path:'successpage',component:SuccesspageComponent},
-
+  {path:'**',component:PagenotfoundComponent},
 ];
 
 @NgModule({

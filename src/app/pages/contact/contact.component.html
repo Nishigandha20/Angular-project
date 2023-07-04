@@ -1,33 +1,46 @@
 <div class="container">
-  <h1 class="mt-5">Contact</h1>
+  <h1 class="mt-5">Get In Touch!</h1>
   <form class="col-lg-8" [formGroup]="loginForm" (submit)="onSubmit()">
     <div class="row">
-      <div class="col-lg-12 mt-2 mb-2">
+      <!--Name-->
+      <div class="col-lg-6 mt-2 mb-2">
+        <label class="field">Name:</label>
         <input type="text" class="form-control" placeholder="Enter your Name" name="username"
           formControlName="username">
         <span style="color: red;" *ngIf="username && username.invalid && username.touched">Please fill the valid
           name</span>
       </div>
-      <div class="col-lg-12 mt-2 mb-2">
+      <!--Last Name-->
+      <div class="col-lg-6 mt-2 mb-2">
+        <label class="field">Last Name:</label>
         <input type="text" class="form-control" placeholder="Enter your Last Name" name="lastname"
           formControlName="lastname">
       </div>
+
+      <!--Email-->
       <div class="col-lg-12 mt-2 mb-2">
+        <label class="field">Email:</label>
         <input type="email" class="form-control" placeholder="Enter your Email ID" name="email" formControlName="email">
         <span style="color: red;" *ngIf="email && email.invalid && email.touched">Please enter the correct Email</span>
       </div>
+      <!--Mobile no-->
       <div class="col-lg-12 mt-2 mb-2">
+        <label class="field">Mobile no:</label>
         <input type="text" class="form-control" placeholder="Enter your Mobile no" name="mobileno"
           formControlName="mobileno">
         <span style="color: red;" *ngIf="mobileno && mobileno.invalid && mobileno.touched">Please enter the Mobile
           no</span>
       </div>
+      <!--Message-->
+      <div class="col-lg-12 mt-2 mb-2">
+        <label class="field">Message</label>
+        <textarea name="message" class="form-control" placeholder="Insert message"></textarea>
+      </div>
+      <!--Submit-->
       <div class="col-lg-12 mt-2 mb-2">
         <button [disabled]="loginForm.invalid" class="btn btn-md btn-dark" (click)="downloadForm()"
-          (ngSubmit)="onSubmit()" type="submit">Submit</button>
+          (ngSubmit)="onSubmit()" type="submit">Send</button>
       </div>
-
-
     </div>
   </form>
-</div>
+  </div>

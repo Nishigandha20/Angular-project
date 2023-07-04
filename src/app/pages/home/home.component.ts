@@ -9,11 +9,13 @@ import { OrderDetailsService } from 'src/app/services/order-details.service';
 export class HomeComponent {
 
   constructor(private service:OrderDetailsService){  }
-  foodData:any;
-
+  foodMenuDisplay:any =[];
   ngOnInit():void{
-    this.foodData = this.service.foodDetails;
+    this.service.foodMenu().subscribe((data :any)=>{
+     this.foodMenuDisplay = data;
 
-  }
 
+    });
+
+}
 }

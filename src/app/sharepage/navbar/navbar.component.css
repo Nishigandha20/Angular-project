@@ -1,7 +1,9 @@
+
+
 .navbar-nav .nav-link {
     color: var(--secondary-color);
+    
 }
-
 
 .navbar-nav .nav-link.active-link {
     color: var(--primary-color);
@@ -15,4 +17,15 @@
 .navbar-brand:hover{
     font-weight: bold;
     color: var(--primary-color);
+}
+
+img{
+    width: 46px;
+    height: 46px;
+    margin-left: 20px;
+    overflow: hidden;
+    margin-top: -6px;
+    margin-right: 20px;
+    background: transparent;
+   
 }

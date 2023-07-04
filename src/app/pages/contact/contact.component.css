@@ -1,0 +1,22 @@
+.container h1{
+  background-color: var(--primary-color);
+  padding: 20px;
+  width: 67%;
+
+}
+.field{
+  font-weight: bold;
+  margin: 3px;
+  font-size: 18px;
+}
+
+h1{
+  font-weight:bold;
+}
+
+
+#map {
+  height: 50%;
+  width: 50%;
+}
+

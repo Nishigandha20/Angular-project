@@ -8,14 +8,16 @@
 
 .content{
     position: absolute;
-    left: 20%;
-    top: 30%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .content h1{
     color: #fff;
     font-size: 60px;
-    font-weight: bold;    
+    font-weight: bold;
 }
 
 .content a{
@@ -38,7 +40,7 @@
     padding: 10px 10px;
     border-radius: 5px;
     text-align: center;
-    
+
 }
 
 .stepBox h1{
@@ -53,7 +55,7 @@
 }
 
 .highlight-text{
-    color: var(--primary-color); 
+    color: var(--primary-color);
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
@@ -67,7 +69,15 @@
     width: 100%;
     height: 250px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.foodbox img:hover{
+opacity: 0.7;
+transform: scale(1.1);
+cursor: pointer;
+
 }
 
 .foodbox h1{
@@ -87,7 +97,12 @@
 }
 
 @media screen and (max-width:600px){
-    .banner{
+    .banner {
         height: 700px;
+    }
+    
+    .content{
+        position: relative;
+        margin-left: 5%;
     }
 }

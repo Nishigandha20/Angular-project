@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
+declare const google: any;
 
 @Component({
   selector: 'app-contact',
@@ -9,33 +9,36 @@ import { Router } from '@angular/router';
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent {
-  constructor(private router:Router){}
+  constructor(private router: Router) {}
+
   loginForm = new FormGroup({
     username: new FormControl('', [Validators.required]),
-    lastname: new FormControl(''),
-    email: new FormControl('',[Validators.required, Validators.email]),
-    mobileno: new FormControl('',[Validators.required, Validators.minLength(10), Validators.maxLength(10)]),
+    lastname: new FormControl('', [Validators.required]),
+    email: new FormControl('', [Validators.required, Validators.email],),
+    mobileno: new FormControl('', [
+      Validators.required,
+      Validators.minLength(10),
+      Validators.maxLength(10),
+    ]),
   });
 
   userLogin() {
     console.log(this.loginForm.value);
   }
-  get username(){
-    return this.loginForm.get('username')
+  get username() {
+    return this.loginForm.get('username');
   }
 
-  get email(){
-    return this.loginForm.get('email')
+  get email() {
+    return this.loginForm.get('email');
   }
 
-  get mobileno(){
-    return this.loginForm.get('mobileno')
+  get mobileno() {
+    return this.loginForm.get('mobileno');
   }
 
-  downloadForm(){
-
-  }
-  onSubmit(){
+  downloadForm() {}
+  onSubmit() {
     this.router.navigate(['/successpage']);
   }
 }

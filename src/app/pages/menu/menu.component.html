@@ -5,18 +5,41 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-lg-4" *ngFor="let fd of foodData">
-          <div class="foodbox mt-3 mb-3">
-              <img src="{{fd.foodImg}}">
-              <h1>{{fd.foodName}}</h1>
-              <p>{{fd.foodDetails}}</p>
-              <p>{{fd.foodPrice | currency:'INR'}}</p>
-              <br>
-              <a class="buybtn" [routerLink]="['/menu', fd.id]">Buy Now &nbsp; <i class="bi bi-bag"></i></a>
-          </div>
+    <div class="menu-banner">
+      <p>Let's try some yummy snacks!!</p>
+    </div>
+    <div
+      class="col-lg-4"
+      *ngFor="
+        let fd of foodMenuDisplay
+          | paginate
+            : {
+                itemsPerPage: 3,
+                currentPage: p,
+                totalItems: 6
+              };
+        let i = index
+      "
+    >
+      <div class="foodbox mt-3 mb-3">
+        <img src="{{ fd.foodImg }}" />
+        <h1>{{ fd.foodName }}</h1>
+        <p class="foodD">{{ fd.foodDetails }}</p>
+        <p class="foodp">{{ fd.foodPrice | currency : "INR" }}</p>
+        <br />
+
+        <button class="buybtn" [routerLink]="['/menu', fd.id]">
+          Buy Now &nbsp; <i class="bi bi-bag"></i>
+        </button>
       </div>
+    </div>
+    <div class="item d-flex justify-content-center text-center mt-4 ">
+      <pagination-controls
+        previousLabel="Prev"
+        nextLabel="Next"
+        (pageChange)="p = $event"
+      >
+      </pagination-controls>
+    </div>
   </div>
 </div>
-
-
-
