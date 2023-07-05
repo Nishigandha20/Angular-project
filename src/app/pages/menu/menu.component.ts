@@ -8,6 +8,21 @@ import { OrderDetailsService } from 'src/app/services/order-details.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css'],
 })
+
+export class MenuComponent {
+  constructor(private _services: OrderDetailsService) {}
+  foodMenuDisplay: any = [];
+  p:any;
+  ngOnInit(): void {
+    this._services.foodMenu().subscribe((data: any) => {
+      this.foodMenuDisplay = data;
+    });
+    
+
+  }
+  
+}
+
 /*
 export class MenuComponent {
   constructor() {}
@@ -32,18 +47,3 @@ export class MenuComponent {
   }
 }
 */
-export class MenuComponent {
-  constructor(private _services: OrderDetailsService) {}
-  foodMenuDisplay: any = [];
-  p:any;
-
-
-  ngOnInit(): void {
-    this._services.foodMenu().subscribe((data: any) => {
-      this.foodMenuDisplay = data;
-    });
-    
-
-  }
-  
-}

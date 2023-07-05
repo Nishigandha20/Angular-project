@@ -37,7 +37,7 @@ export class ContactComponent {
     return this.loginForm.get('mobileno');
   }
 
-  downloadForm() {}
+ 
   onSubmit() {
     this.router.navigate(['/successpage']);
   }
